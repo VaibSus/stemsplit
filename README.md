@@ -1,4 +1,4 @@
-# Stemsplit 🎵
+# Stemsplit
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688.svg)](https://fastapi.tiangolo.com)
@@ -6,13 +6,13 @@
 [![Demucs](https://img.shields.io/badge/Demucs-v4-blueviolet.svg)](https://github.com/facebookresearch/demucs)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-A minimal, distraction-free local web application that separates music tracks into isolated instrument stems using **Meta Demucs (`htdemucs_6s`)** and **FastAPI**.
+A minimal, local web application that separates music tracks into isolated instrument stems using **Meta Demucs (`htdemucs_6s`)** and **FastAPI**.
 
 Runs completely offline on your own machine with GPU acceleration and automatic CPU fallback.
 
 ---
 
-## ✨ Features
+## Features
 
 - **6-Stem Separation**: Splits audio into **Piano**, **Guitar**, **Drums**, **Bass**, **Vocals**, and **Other**, alongside the full mix.
 - **Hardware Acceleration**: Built for NVIDIA GPUs (CUDA 12.8+ / RTX series), with automatic CPU fallback.
@@ -23,18 +23,18 @@ Runs completely offline on your own machine with GPU acceleration and automatic 
 
 ---
 
-## 🛠️ Project Structure
+## Project Structure
 
 ```
 stemsplit/
 ├── static/
-│   ├── index.html       # Minimal single-page UI
+│   ├── index.html       # Single-page UI
 │   ├── style.css        # Clean, neutral styling
-│   └── app.js           # Audio player & API interaction
-├── samples/             # Sample audio files & persistent library
+│   └── app.js           # Audio player and API interaction
+├── samples/             # Sample audio files and persistent library
 ├── outputs/             # Cached stem output folders (<hash>/)
-├── separator.py         # Demucs runner, CUDA detection & hash caching
-├── main.py              # FastAPI server (API & static hosting)
+├── separator.py         # Demucs runner, CUDA detection, and hash caching
+├── main.py              # FastAPI server (API and static hosting)
 ├── requirements.txt     # Python dependencies
 ├── LICENSE              # MIT License
 └── README.md
@@ -42,12 +42,12 @@ stemsplit/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Prerequisites
 
 - **Python 3.10+**
-- **FFmpeg** (Required by Demucs for audio processing)
+- **FFmpeg** (Required by Demucs for audio encoding and decoding)
 
 #### Install FFmpeg on Windows
 ```powershell
@@ -106,11 +106,11 @@ python main.py
 ```
 
 Then open your browser at:
-👉 **[http://localhost:8000](http://localhost:8000)**
+**http://localhost:8000**
 
 ---
 
-## 🎧 Supported Audio Formats
+## Supported Audio Formats
 
 - `.mp3`
 - `.wav`
@@ -119,11 +119,11 @@ Then open your browser at:
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
 - [Demucs](https://github.com/facebookresearch/demucs) by Meta AI Research.
 - [FastAPI](https://fastapi.tiangolo.com/) for the web framework.
