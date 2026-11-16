@@ -1,0 +1,29 @@
+# Virtual environment (avoids pushing gigabytes of PyTorch / CUDA binaries)
+.venv/
+env/
+venv/
+ENV/
+
+# Python cache & bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Processed audio stems & caches (large audio files)
+outputs/*
+!outputs/.gitkeep
+**/_temp_demucs/
+
+# Keep sample directory and demo song, ignore uploaded tracks
+samples/*
+!samples/short_groove.wav
+!samples/.gitkeep
+
+# OS and Editor files
+.vscode/
+.idea/
+*.log
+.DS_Store
+Thumbs.db
